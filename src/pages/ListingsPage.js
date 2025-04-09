@@ -27,7 +27,7 @@ const ListingsPage = () => {
   useEffect(() => {
     const fetchPublicListings = async () => {
       try {
-        const response = await axios.get("http://localhost:8001/public-listings");
+        const response = await axios.get("https://online-prs-frontend.vercel.app/public-listings");
         setPublicListings(response.data);
       } catch (err) {
         console.error("Error fetching public listings:", err);

@@ -23,7 +23,7 @@ const EditListing = () => {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`http://localhost:8001/listings?id=${id}`, {
+        const response = await axios.get(`https://online-prs-frontend.vercel.app/listings?id=${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log("Fetched listing:", response.data);
@@ -50,7 +50,7 @@ const EditListing = () => {
 
     try {
       await axios.put(
-        `http://localhost:8001/edit-listing/${id}`,
+        `https://online-prs-frontend.vercel.app/edit-listing/${id}`,
         {
           title: listing.title,
           description: listing.description,

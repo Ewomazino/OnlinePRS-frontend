@@ -11,7 +11,7 @@ const Logout = () => {
         // Call the server-side logout endpoint.
         // Adjust the URL and HTTP method as needed.
         await axios.post(
-          "http://localhost:8001/logout",
+          "https://online-prs-frontend.vercel.app/logout",
           {},
           { headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` } }
         );

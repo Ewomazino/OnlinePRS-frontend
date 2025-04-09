@@ -41,7 +41,7 @@ const OwnerDashboard = () => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const response = await axios.get("http://localhost:8001/owner-listings", {
+        const response = await axios.get("https://online-prs-frontend.vercel.app/owner-listings", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setListings(response.data);
@@ -56,7 +56,7 @@ const OwnerDashboard = () => {
   const handleDelete = async (listingId) => {
     if (window.confirm("Are you sure you want to delete this listing?")) {
       try {
-        await axios.delete(`http://localhost:8001/delete-listing/${listingId}`, {
+        await axios.delete(`https://online-prs-frontend.vercel.app/delete-listing/${listingId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setListings(prevListings => prevListings.filter(listing => listing.id !== listingId));

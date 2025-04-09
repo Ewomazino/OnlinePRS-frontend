@@ -32,7 +32,7 @@ const MyBookings = () => {
   useEffect(() => {
     const fetchBookingHistory = async () => {
       try {
-        const response = await axios.get("http://localhost:8001/booking-history", {
+        const response = await axios.get("https://online-prs-frontend.vercel.app/booking-history", {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log("Fetched booking history:", response.data);
@@ -53,7 +53,7 @@ const MyBookings = () => {
   // Cancel handler now uses the flat listing_id from the booking object.
   const handleCancel = async (listingId) => {
     try {
-      await axios.delete(`http://localhost:8001/cancel-book?listingId=${listingId}`, {
+      await axios.delete(`https://online-prs-frontend.vercel.app/cancel-book?listingId=${listingId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json"
