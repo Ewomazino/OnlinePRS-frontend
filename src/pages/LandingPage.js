@@ -22,7 +22,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     // Example: fetch featured listings from your backend.
-    axios.get("https://online-prs-frontend.vercel.app/featured-listings")
+    axios.get("https://online-rps-backend.vercel.app/featured-listings")
       .then((response) => {
         // Assuming the response is an array of listing objects.
         setFeaturedListings(response.data);

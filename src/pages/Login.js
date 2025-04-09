@@ -29,7 +29,7 @@ const LoginPage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://online-prs-frontend.vercel.app/login", {
+      const response = await fetch("https://online-rps-backend.vercel.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",

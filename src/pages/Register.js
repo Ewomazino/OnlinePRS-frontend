@@ -34,7 +34,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://online-prs-frontend.vercel.app/register", user, {
+      const response = await axios.post("https://online-rps-backend.vercel.app/register", user, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });

@@ -19,8 +19,8 @@ const TenantDashboard = () => {
     const fetchListingsAndBookings = async () => {
       try {
         const [listingsRes, bookingsRes] = await Promise.all([
-          axios.get("https://online-prs-frontend.vercel.app/listings"),
-          axios.get("https://online-prs-frontend.vercel.app/my-bookings", {
+          axios.get("https://online-rps-backend.vercel.app/listings"),
+          axios.get("https://online-rps-backend.vercel.app/my-bookings", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -55,7 +55,7 @@ const TenantDashboard = () => {
   const handleBook = async (listingId) => {
     try {
       await axios.post(
-        "https://online-prs-frontend.vercel.app/book",
+        "https://online-rps-backend.vercel.app/book",
         { listingId },
         {
           headers: {
@@ -77,7 +77,7 @@ const TenantDashboard = () => {
 
   const handleCancel = async (listingId) => {
     try {
-      await axios.delete(`https://online-prs-frontend.vercel.app/cancel-book?listingId=${listingId}`, {
+      await axios.delete(`https://online-rps-backend.vercel.app/cancel-book?listingId=${listingId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const newMap = { ...bookingsMap };

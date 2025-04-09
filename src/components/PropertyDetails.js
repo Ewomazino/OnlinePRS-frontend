@@ -9,7 +9,7 @@ const PropertyDetails = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const response = await axios.get(`https://online-prs-frontend.vercel.app/listings/${id}`);
+        const response = await axios.get(`https://online-rps-backend.vercel.app/listings/${id}`);
         setProperty(response.data);
       } catch (error) {
         console.error("Error fetching property:", error);
