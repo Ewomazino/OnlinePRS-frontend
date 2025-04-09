@@ -1,0 +1,130 @@
+.listing-details-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.listing-details h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.listing-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.gallery {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.main-image {
+  margin-bottom: 1rem;
+}
+
+.gallery-thumbnail {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.thumbnails-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.thumbnail:hover, .thumbnail.active {
+  border-color: #007bff;
+}
+
+.contact-owner {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-owner h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.contact-owner form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-owner textarea {
+  resize: vertical;
+  min-height: 100px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.contact-owner button {
+  align-self: flex-start;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-owner button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .listing-details-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .listing-details h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-thumbnail {
+    max-width: 100%;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+}

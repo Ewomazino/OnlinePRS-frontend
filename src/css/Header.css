@@ -1,0 +1,139 @@
+/* Header Container */
+.header {
+    background-color: #2D3A47; /* Dark background for the header */
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .header .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .header-actions a {
+    color: #B0BEC5; /* Light grayish blue for links */
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .header .header-actions a:hover {
+    color: #4C8BF5; /* Blue color on hover */
+  }
+  
+  .header .header-actions .logout-btn {
+    background-color: #FF8A65; /* Accent orange */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header .header-actions .logout-btn:hover {
+    background-color: #FF7043; /* Darker orange on hover */
+  }
+  
+  /* Hamburger Menu for Mobile */
+  .hamburger-menu {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+  }
+  
+  .hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .header .header-actions .menu {
+    display: flex; /* Menu is visible by default on desktop */
+  }
+  /* Style the search bar */
+.header-search {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  .sort-dropdown {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sort-dropdown label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .sort-dropdown select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .sort-dropdown select:focus {
+    outline: none;
+    border-color: #007bff;
+  } 
+  /* Mobile Menu (when the screen size is small) */
+  @media (max-width: 768px) {
+    .header .header-actions .menu {
+      display: none; /* Hide menu items on small screens */
+      flex-direction: column;
+      position: absolute;
+      background-color: #2D3A47; /* Dark background for mobile menu */
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  
+    .header .header-actions .menu.active {
+      display: flex; /* Show menu when active */
+    }
+  
+    .hamburger-menu {
+      display: flex; /* Show hamburger icon on small screens */
+    }
+  }

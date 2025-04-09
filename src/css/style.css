@@ -1,0 +1,90 @@
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-container h2 {
+    text-align: center;
+  }
+  
+  .register-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-container input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .register-container button {
+    padding: 10px;
+    font-size: 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .register-container button:hover {
+    background: #0056b3;
+  }
+  /* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Style the select dropdown */
+.register-container select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    appearance: none; /* Removes default dropdown arrow */
+    -webkit-appearance: none; /* Removes default dropdown arrow in Safari */
+    -moz-appearance: none; /* Removes default dropdown arrow in Firefox */
+  }
+  
+  /* Add a custom dropdown arrow */
+  .register-container select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='%23007bff'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 30px;
+  }
+  
+  /* Hover effect */
+  .register-container select:hover {
+    border-color: #007bff;
+  }
+  
+  /* Focus effect */
+  .register-container select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+  }
+  
+  /* Style for disabled select */
+  .register-container select:disabled {
+    background: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+  /* Optional: Make the dropdown look like an input field */
+  .register-container select {
+    display: block;
+    width: 100%;
+  }
