@@ -38,7 +38,7 @@ const ListingDetails = () => {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`https://online-rps-backend.vercel.app/listing-details?listingId=${listingId}`, {
+        const response = await axios.get(`https://onlinerps-backend.onrender.com//listing-details?listingId=${listingId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         // If the API returns an array, extract the first element.

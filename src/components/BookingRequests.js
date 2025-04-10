@@ -13,7 +13,7 @@ const BookingRequests = () => {
   useEffect(() => {
     const fetchBookingRequests = async () => {
       try {
-        const response = await axios.get('https://online-rps-backend.vercel.app/owner-booking-requests', {
+        const response = await axios.get('https://onlinerps-backend.onrender.com//owner-booking-requests', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBookingRequests(response.data);
@@ -27,7 +27,7 @@ const BookingRequests = () => {
 
   const handleApprove = async (bookingId) => {
     try {
-      await axios.put(`https://online-rps-backend.vercel.app/approve-booking/${bookingId}`, {}, {
+      await axios.put(`https://onlinerps-backend.onrender.com//approve-booking/${bookingId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookingRequests(prev =>
@@ -48,7 +48,7 @@ const BookingRequests = () => {
 
   const handleDecline = async (bookingId) => {
     try {
-      await axios.put(`https://online-rps-backend.vercel.app/decline-booking/${bookingId}`, {}, {
+      await axios.put(`https://onlinerps-backend.onrender.com//decline-booking/${bookingId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookingRequests(prev =>
@@ -63,7 +63,7 @@ const BookingRequests = () => {
 
   const handleTerminate = async (bookingId) => {
     try {
-      await axios.put(`https://online-rps-backend.vercel.app/terminate-booking/${bookingId}`, {}, {
+      await axios.put(`https://onlinerps-backend.onrender.com//terminate-booking/${bookingId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookingRequests(prev =>

@@ -30,7 +30,7 @@ const PublicListingDetails = () => {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`https://online-rps-backend.vercel.app/public-listing?listingId=${listingId}`);
+        const response = await axios.get(`https://onlinerps-backend.onrender.com//public-listing?listingId=${listingId}`);
         // If the response is an array, take the first element.
         const data = Array.isArray(response.data) ? response.data[0] : response.data;
         console.log("Fetched listing data:", data);

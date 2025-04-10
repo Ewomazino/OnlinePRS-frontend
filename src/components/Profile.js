@@ -19,7 +19,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("https://online-rps-backend.vercel.app/profile", {
+        const response = await axios.get("https://onlinerps-backend.onrender.com//profile", {
           headers: { Authorization: `Bearer ${token}` }
         });
         console.log("Fetched profile:", response.data);
@@ -38,7 +38,7 @@ const Profile = () => {
         name: profile.name,
         phone: profile.phone
       };
-      const response = await axios.put("https://online-rps-backend.vercel.app/profile", payload, {
+      const response = await axios.put("https://onlinerps-backend.onrender.com//profile", payload, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json"
