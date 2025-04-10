@@ -34,7 +34,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://onlinerps-backend.onrender.com//register", user, {
+      const response = await axios.post("https://onlinerps-backend.onrender.com/register", user, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });

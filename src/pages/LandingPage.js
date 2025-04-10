@@ -22,7 +22,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     // Example: fetch featured listings from your backend.
-    axios.get("https://onlinerps-backend.onrender.com//featured-listings")
+    axios.get("https://onlinerps-backend.onrender.com/featured-listings")
       .then((response) => {
         // Assuming the response is an array of listing objects.
         setFeaturedListings(response.data);

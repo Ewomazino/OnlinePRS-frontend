@@ -19,8 +19,8 @@ const TenantDashboard = () => {
     const fetchListingsAndBookings = async () => {
       try {
         const [listingsRes, bookingsRes] = await Promise.all([
-          axios.get("https://onlinerps-backend.onrender.com//listings"),
-          axios.get("https://onlinerps-backend.onrender.com//my-bookings", {
+          axios.get("https://onlinerps-backend.onrender.com/listings"),
+          axios.get("https://onlinerps-backend.onrender.com/my-bookings", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -55,7 +55,7 @@ const TenantDashboard = () => {
   const handleBook = async (listingId) => {
     try {
       await axios.post(
-        "https://onlinerps-backend.onrender.com//book",
+        "https://onlinerps-backend.onrender.com/book",
         { listingId },
         {
           headers: {
@@ -77,7 +77,7 @@ const TenantDashboard = () => {
 
   const handleCancel = async (listingId) => {
     try {
-      await axios.delete(`https://onlinerps-backend.onrender.com//cancel-book?listingId=${listingId}`, {
+      await axios.delete(`https://onlinerps-backend.onrender.com/cancel-book?listingId=${listingId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const newMap = { ...bookingsMap };

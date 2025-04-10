@@ -23,7 +23,7 @@ const EditListing = () => {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`https://onlinerps-backend.onrender.com//listings?id=${id}`, {
+        const response = await axios.get(`https://onlinerps-backend.onrender.com/listings?id=${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log("Fetched listing:", response.data);
@@ -50,7 +50,7 @@ const EditListing = () => {
 
     try {
       await axios.put(
-        `https://onlinerps-backend.onrender.com//edit-listing/${id}`,
+        `https://onlinerps-backend.onrender.com/edit-listing/${id}`,
         {
           title: listing.title,
           description: listing.description,

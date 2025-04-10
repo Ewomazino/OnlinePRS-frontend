@@ -11,7 +11,7 @@ const Logout = () => {
         // Call the server-side logout endpoint.
         // Adjust the URL and HTTP method as needed.
         await axios.post(
-          "https://onlinerps-backend.onrender.com//logout",
+          "https://onlinerps-backend.onrender.com/logout",
           {},
           { headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` } }
         );

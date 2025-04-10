@@ -36,7 +36,7 @@ const CreateListing = () => {
     });
 
     try {
-      const response = await axios.post("https://onlinerps-backend.onrender.com//create-listing", formData, {
+      const response = await axios.post("https://onlinerps-backend.onrender.com/create-listing", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           // Do not explicitly set Content-Type; the browser will set the proper multipart boundary.

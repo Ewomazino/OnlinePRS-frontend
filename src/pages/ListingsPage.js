@@ -27,7 +27,7 @@ const ListingsPage = () => {
   useEffect(() => {
     const fetchPublicListings = async () => {
       try {
-        const response = await axios.get("https://onlinerps-backend.onrender.com//public-listings");
+        const response = await axios.get("https://onlinerps-backend.onrender.com/public-listings");
         setPublicListings(response.data);
       } catch (err) {
         console.error("Error fetching public listings:", err);

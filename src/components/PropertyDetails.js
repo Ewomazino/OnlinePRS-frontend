@@ -9,7 +9,7 @@ const PropertyDetails = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const response = await axios.get(`https://onlinerps-backend.onrender.com//listings/${id}`);
+        const response = await axios.get(`https://onlinerps-backend.onrender.com/listings/${id}`);
         setProperty(response.data);
       } catch (error) {
         console.error("Error fetching property:", error);
